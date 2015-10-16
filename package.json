@@ -1,0 +1,19 @@
+{
+  "name": "company-lookup",
+  "version": "0.0.1",
+  "description": "Parse out company suffix to run a lookup",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "author": "Grant George",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "colors": "^1.1.2",
+    "mocha": "^2.3.3"
+  },
+  "dependencies": {
+    "async": "^1.4.2"
+  }
+}
