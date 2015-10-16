@@ -49,7 +49,9 @@ function companiesTableLookup (companyName) {
     'toutapp',
     'facebook',
     'google',
-    'linkedin'
+    'linkedin',
+    'fuze',
+    'wavefront'
   ];
   return companiesTable.indexOf(companyName.toLowerCase())
 }
@@ -125,6 +127,22 @@ describe('company name parsing', function () {
     var testName = 'Facebook | Facebook';
     lookupCompany(testName, function (res) {
       res.should.equal(1)
+      done()
+    });
+  });
+
+  it('should find a match for Fuze, Inc.', function (done) {
+    var testName = 'Fuze, Inc.';
+    lookupCompany(testName, function (res) {
+      res.should.equal(4)
+      done()
+    });
+  });
+
+  it('should find a match for Wavefront Inc.', function (done) {
+    var testName = 'Wavefront Inc.';
+    lookupCompany(testName, function (res) {
+      res.should.equal(5)
       done()
     });
   });
